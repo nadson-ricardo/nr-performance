@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>NR Performance | Nadson Personal Trainer</title>
+  <meta name="description" content="Consultoria online, avaliação física, projeto de emagrecimento e aplicativo de treinos com o personal trainer Nadson. Escolha uma opção e fale no WhatsApp.">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="color-scheme" content="dark">
+
+  <!-- ============================================================
+       PRÉVIA DO LINK (WhatsApp, Instagram, Facebook...)
+       Depois de publicar o site, troque SEU-SITE-AQUI (logo abaixo,
+       em og:image) pelo endereço do seu site, sem "https://" e sem
+       barra no final. Exemplo: nrperformance.netlify.app
+       ============================================================ -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="NR Performance">
+  <meta property="og:title" content="NR Performance | Nadson Personal Trainer">
+  <meta property="og:description" content="Consultoria online, avaliação física, projeto de emagrecimento e aplicativo particular. Escolha uma opção e fale direto no WhatsApp.">
+  <meta property="og:image" content="https://SEU-SITE-AQUI/logo.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:image:alt" content="Logo da NR Performance">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Ícone da aba (feito a partir do "NR" da logo) e ícone do iPhone -->
+  <link rel="icon" type="image/jpeg" sizes="640x640" href="logo.jpg">
+  <link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAYFBMVEX/5g//4w3/4Qz+3A3+2A771Ar60gn20w7qyRXGrBeWhB10ZRZTSBc2MBYVEw8NDAsNDQoNDAoNDQkMDAoMCwoLCwoLCg0LCgoKCgoKCgkICAsFBgkBAgkAAAsAAAkAAAgih41PAAACpUlEQVR42u2W25KkIBBEURRQ5NKL2Cgi//+XU6jdXmdiY+dto/NR8USRlQUi90uhD+AD+AD+L4A1vwNYP6rfAMzYNJOx/w7QE0c89I+b10bNepiDWnsGNBmuu1Ffvn+O8U7joNozgKBKTGfCcxCNuJMMXp0AJclZE05GmFChAhcXUVbLSZ0ARYkLHoZDNx6hykmJ86NwWeKMiaCOgCRUq4MRCVAWrDqKYVwSzIRvjwCMCc0qEfQBkJFCxG7YqZOiAkJWLyW8TcxrWEzBiF0izFyBiIcG932UDJeYycG+ADF1gXcVKmkBRvRmByBYxGNMnzrwjJRUjGYPyPjk66wgYMTw6lE7AqA4A5weOSJQ2RkwAhmMKFEl10TYN8DupUOdKpDenirQKgiWE5JXIuplyF5b8HtFwQpYNH9/BICdskoNgUxpeN0PC6BVcifBwcMSNePjCnBqVDWCLi9W9t3aha5mm2ie9skn424A7jEEjmYrvdduWAC6HwCLV6UgUh6MuwW41oaGYgLDJUe9mmhswhLIKqUFTaMgXt9fAdDm+LbSL0k00AXoPQBYswzjlvgd4B1iHWWFyDyeguEZ4CwsKnAagejHQRv3E8Bpn/ZMC8wnwdAMmAMPW8vp0qCfAc70gReYljAxgjULAAhpa5g2k7a3gP2BZP+EhuU0pVIKv64HQvIE8/3Bsw1TEw5DNxuRzikxmW0Ikjkl2s3bC4Dh4WVkumQEXqdulvJAoCkkw6mNqA7983SkKjCCzlHePFfJ3hSzzu/ORBWbOtjrxWINWJjRPcApF1JdeSXjFuWnl9K3d9eODlDyAeBaqAtlOWJim0YY2/6bi035sXl3Ya0Lsl6DeNfvbudvL0ZjJ39+aaYAivYv/w/0Fa6TzOcf6QP4AD6Ao74AzqZU3x5xH2wAAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
+  <!-- Fontes: Montserrat (títulos) e Inter (textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap">
+
+  <style>
+    /* ============ CORES E FONTES ============ */
+    :root {
+      --preto: #0A0A0A;
+      --amarelo: #FFD100;
+      --branco: #FFFFFF;
+      --cinza: #BDBDBD;
+      --borda: rgba(255, 255, 255, 0.08);
+      --brilho: 0 0 0 1px rgba(255, 209, 0, 0.5), 0 10px 30px -6px rgba(255, 209, 0, 0.38);
+      --raio: 18px;
+      --fonte-titulo: "Montserrat", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+      --fonte-texto: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      background: var(--preto);
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--branco);
+      font-family: var(--fonte-texto);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection { background: var(--amarelo); color: var(--preto); }
+
+    .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    /* Texto lido só por leitores de tela */
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ============ FUNDO DECORATIVO ============ */
+    .fundo {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background:
+        radial-gradient(90% 50% at 50% -6%, rgba(255, 209, 0, 0.11), rgba(255, 209, 0, 0) 64%),
+        radial-gradient(70% 38% at 50% 110%, rgba(255, 209, 0, 0.05), rgba(255, 209, 0, 0) 70%);
+    }
+
+    .fundo-barras {
+      display: none;
+      position: absolute;
+      color: var(--amarelo);
+      opacity: 0.06;
+    }
+
+    /* ============ ESTRUTURA ============ */
+    .pagina {
+      width: 100%;
+      max-width: 520px;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: calc(22px + env(safe-area-inset-top)) 16px 8px;
+    }
+
+    .topo { text-align: center; }
+
+    /* A logo tem fundo preto: recortamos as sobras de cima e de baixo
+       e "fundimos" o preto dela com o fundo do site. */
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: min(78vw, 300px);
+      height: auto;
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+      object-position: 50% 46.9%;
+      mix-blend-mode: lighten;
+    }
+
+    .titulo {
+      margin: 14px 0 10px;
+      font-family: var(--fonte-titulo);
+      font-weight: 800;
+      font-size: clamp(1.125rem, 6vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    .destaque { color: var(--amarelo); }
+
+    .subtitulo {
+      margin: 0 auto;
+      max-width: 34ch;
+      color: var(--cinza);
+      font-size: 1rem;
+      text-wrap: balance;
+    }
+
+    /* ============ CARTÕES (BOTÕES DO WHATSAPP) ============ */
+    .cartoes {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .cartao {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-height: 80px;
+      padding: 14px;
+      border-radius: var(--raio);
+      border: 1px solid var(--borda);
+      background: linear-gradient(180deg, #171717 0%, #111111 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 30px -18px rgba(0, 0, 0, 0.9);
+      color: var(--branco);
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* As três barras "///" da logo, bem discretas, no canto do cartão */
+    .cartao::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      right: -34px;
+      width: 150px;
+      height: 52px;
+      transform: translateY(-50%);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 22'%3E%3Cpath fill='%23FFD100' d='M18 0h10L10 22H0zM36 0h10L28 22H18zM54 0h10L46 22H36z'/%3E%3C/svg%3E") center / contain no-repeat;
+      opacity: 0.06;
+      transition: opacity 0.25s ease, transform 0.35s ease;
+    }
+
+    .cartao-icone {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      color: var(--preto);
+      background: linear-gradient(145deg, #FFE15C 0%, var(--amarelo) 48%, #F0B400 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 6px 18px -8px rgba(255, 209, 0, 0.6);
+    }
+    .cartao-icone svg { width: 24px; height: 24px; }
+
+    .cartao-texto {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .cartao-titulo {
+      font-family: var(--fonte-titulo);
+      font-weight: 700;
+      font-size: clamp(0.8125rem, 3.65vw, 0.9375rem);
+      line-height: 1.25;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cartao-desc {
+      color: var(--cinza);
+      font-size: clamp(0.8125rem, 3.5vw, 0.875rem);
+      line-height: 1.4;
+      text-wrap: pretty;
+    }
+
+    /* Círculo com o ícone do WhatsApp: aparece a partir de 420px de largura */
+    .cartao-whats {
+      flex: none;
+      display: none;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--cinza);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(10, 10, 10, 0.6);
+      transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .cartao-whats svg { width: 18px; height: 18px; }
+
+    /* Brilho ao passar o mouse (só em aparelhos com mouse) */
+    @media (hover: hover) {
+      .cartao:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 209, 0, 0.55);
+        box-shadow: var(--brilho);
+      }
+      .cartao:hover::before { opacity: 0.16; transform: translate(-8px, -50%); }
+      .cartao:hover .cartao-whats {
+        color: var(--preto);
+        background: var(--amarelo);
+        border-color: var(--amarelo);
+        box-shadow: 0 0 16px rgba(255, 209, 0, 0.5);
+      }
+    }
+
+    /* Efeito de "pressionar" + brilho ao tocar */
+    .cartao:active {
+      transform: scale(0.97);
+      border-color: rgba(255, 209, 0, 0.7);
+      box-shadow: var(--brilho);
+      transition-duration: 0.08s;
+    }
+    .cartao:active .cartao-whats {
+      color: var(--preto);
+      background: var(--amarelo);
+      border-color: var(--amarelo);
+    }
+
+    /* Foco visível para quem navega pelo teclado */
+    .cartao:focus-visible {
+      outline: 3px solid var(--amarelo);
+      outline-offset: 3px;
+      box-shadow: var(--brilho);
+    }
+
+    /* ============ BOTÃO DO INSTAGRAM ============ */
+    .botao-instagram {
+      align-self: center;
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--cinza);
+      font-size: clamp(0.8125rem, 3.9vw, 0.9375rem);
+      font-weight: 500;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .botao-instagram svg { flex: none; width: 20px; height: 20px; transition: color 0.25s ease; }
+    .botao-instagram strong { color: var(--branco); font-weight: 600; white-space: nowrap; }
+
+    @media (hover: hover) {
+      .botao-instagram:hover {
+        color: var(--branco);
+        border-color: rgba(255, 209, 0, 0.6);
+        box-shadow: 0 0 24px -6px rgba(255, 209, 0, 0.45);
+      }
+      .botao-instagram:hover svg { color: var(--amarelo); }
+    }
+    .botao-instagram:active {
+      transform: scale(0.97);
+      border-color: rgba(255, 209, 0, 0.7);
+      box-shadow: 0 0 24px -6px rgba(255, 209, 0, 0.5);
+    }
+    .botao-instagram:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; }
+
+    /* ============ RODAPÉ ============ */
+    .rodape {
+      width: 100%;
+      max-width: 520px;
+      padding: 30px 18px calc(24px + env(safe-area-inset-bottom));
+      color: rgba(189, 189, 189, 0.75);
+      font-size: 0.8125rem;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+    .rodape p { margin: 12px 0 0; }
+
+    .divisor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    .divisor span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 209, 0, 0), rgba(255, 209, 0, 0.55));
+    }
+    .divisor span:last-child {
+      background: linear-gradient(90deg, rgba(255, 209, 0, 0.55), rgba(255, 209, 0, 0));
+    }
+    .divisor svg { flex: none; width: 30px; height: 11px; color: var(--amarelo); }
+
+    /* ============ ANIMAÇÃO DE ENTRADA ============ */
+    .entrada {
+      animation: surgir 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      animation-delay: calc(var(--i, 0) * 75ms + 60ms);
+    }
+    .logo.entrada { animation-name: surgir-logo; animation-duration: 0.8s; }
+
+    @keyframes surgir {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes surgir-logo {
+      from { opacity: 0; transform: scale(0.94); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @media (min-width: 420px) {
+      .cartao-whats { display: grid; }
+    }
+
+    /* ============ COMPUTADOR / TELAS MAIORES ============ */
+    @media (min-width: 768px) {
+      .pagina { max-width: 540px; padding-top: 56px; }
+      .logo { width: 340px; }
+      .titulo { font-size: 2.1rem; }
+      .subtitulo { font-size: 1.0625rem; }
+      .cartoes { margin-top: 32px; gap: 14px; }
+      .cartao { min-height: 88px; gap: 16px; padding: 16px 18px 16px 16px; }
+      .cartao-icone { width: 54px; height: 54px; border-radius: 15px; }
+      .cartao-icone svg { width: 26px; height: 26px; }
+      .cartao-titulo { font-size: 1rem; }
+      .cartao-desc { font-size: 0.9375rem; }
+      .botao-instagram { margin-top: 28px; }
+      .rodape { max-width: 540px; }
+      .fundo-barras { display: block; width: 620px; height: 213px; }
+      .fundo-barras--topo { top: 80px; right: -140px; }
+      .fundo-barras--base { bottom: 190px; left: -160px; }
+    }
+
+    /* ============ CELULARES BEM PEQUENOS ============ */
+    @media (max-width: 370px) {
+      .pagina { padding-left: 14px; padding-right: 14px; }
+      .cartao { gap: 12px; padding: 14px 12px; }
+      .cartao-icone { width: 42px; height: 42px; border-radius: 12px; }
+      .cartao-icone svg { width: 22px; height: 22px; }
+      .botao-instagram { padding: 12px 16px; }
+    }
+    @media (max-width: 340px) {
+      .botao-instagram { gap: 8px; padding: 12px 12px; }
+    }
+
+    /* ============ MENOS MOVIMENTO ============
+       Para quem ativou "reduzir movimento" no celular/computador. */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .cartao:hover, .cartao:active, .botao-instagram:active { transform: none; }
+      .cartao:hover::before { transform: translateY(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ícones usados na página (SVG) -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-halter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 12h8"/>
+      <rect x="5" y="5.5" width="3" height="13" rx="1"/>
+      <rect x="16" y="5.5" width="3" height="13" rx="1"/>
+      <rect x="2" y="8.5" width="3" height="7" rx="1"/>
+      <rect x="19" y="8.5" width="3" height="7" rx="1"/>
+    </symbol>
+    <symbol id="i-avaliacao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 4.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6.5a2 2 0 0 0-2-2h-1"/>
+      <rect x="8" y="2.5" width="8" height="4" rx="1.2"/>
+      <path d="M7.5 14h2.2l1.6-3.2 2.2 6 1.6-2.8h1.4"/>
+    </symbol>
+    <symbol id="i-chama" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.5c3.9 0 6.5-2.7 6.5-6.5 0-3-1.6-5.4-3.4-7.2-.2 1.9-1 3.1-2.1 3.7.3-3.3-.8-6.3-3-8.7.1 3.2-1.8 5.3-3.2 7.1-.9 1.2-1.3 2.8-1.3 4.6 0 3.9 2.6 7 6.5 7z"/>
+    </symbol>
+    <symbol id="i-celular" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2.6"/>
+      <path d="M10.5 18.5h3M9.5 13.5v-2M12 13.5V8.5M14.5 13.5v-3.5"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-barras" viewBox="0 0 64 22">
+      <path fill="currentColor" d="M18 0h10L10 22H0zM36 0h10L28 22H18zM54 0h10L46 22H36z"/>
+    </symbol>
+  </svg>
+
+  <!-- Detalhes decorativos do fundo -->
+  <div class="fundo" aria-hidden="true">
+    <svg class="fundo-barras fundo-barras--topo"><use href="#i-barras"/></svg>
+    <svg class="fundo-barras fundo-barras--base"><use href="#i-barras"/></svg>
+  </div>
+
+  <main class="pagina">
+
+    <!-- 1, 2 e 3: logo, título e subtítulo -->
+    <header class="topo">
+      <img class="logo entrada" style="--i:0" src="logo.jpg" alt="NR Performance" width="640" height="640" fetchpriority="high">
+      <h1 class="titulo entrada" style="--i:1">Transforme <span class="destaque">seu corpo</span> com acompanhamento profissional</h1>
+      <p class="subtitulo entrada" style="--i:2">Escolha uma opção abaixo e fale comigo direto no WhatsApp 👇</p>
+    </header>
+
+    <!-- 4: os quatro botões. As mensagens do WhatsApp ficam no final do arquivo. -->
+    <section aria-labelledby="titulo-servicos">
+      <h2 id="titulo-servicos" class="sr-only">Serviços</h2>
+      <ul class="cartoes">
+        <li class="entrada" style="--i:3">
+          <a class="cartao" href="https://wa.me/5587981812578" data-servico="consultoria" target="_blank" rel="noopener">
+            <span class="cartao-icone" aria-hidden="true"><svg><use href="#i-halter"/></svg></span>
+            <span class="cartao-texto">
+              <span class="cartao-titulo">Consultoria Online</span>
+              <span class="cartao-desc">Treino personalizado onde você estiver.</span>
+            </span>
+            <span class="cartao-whats" aria-hidden="true"><svg><use href="#i-whatsapp"/></svg></span>
+            <span class="sr-only">(abre o WhatsApp em nova aba)</span>
+          </a>
+        </li>
+        <li class="entrada" style="--i:4">
+          <a class="cartao" href="https://wa.me/5587981812578" data-servico="avaliacao" target="_blank" rel="noopener">
+            <span class="cartao-icone" aria-hidden="true"><svg><use href="#i-avaliacao"/></svg></span>
+            <span class="cartao-texto">
+              <span class="cartao-titulo">Avaliação Física</span>
+              <span class="cartao-desc">Descubra seu ponto de partida.</span>
+            </span>
+            <span class="cartao-whats" aria-hidden="true"><svg><use href="#i-whatsapp"/></svg></span>
+            <span class="sr-only">(abre o WhatsApp em nova aba)</span>
+          </a>
+        </li>
+        <li class="entrada" style="--i:5">
+          <a class="cartao" href="https://wa.me/5587981812578" data-servico="emagrecimento" target="_blank" rel="noopener">
+            <span class="cartao-icone" aria-hidden="true"><svg><use href="#i-chama"/></svg></span>
+            <span class="cartao-texto">
+              <span class="cartao-titulo">Projeto de Emagrecimento</span>
+              <span class="cartao-desc">Resultado real com acompanhamento.</span>
+            </span>
+            <span class="cartao-whats" aria-hidden="true"><svg><use href="#i-whatsapp"/></svg></span>
+            <span class="sr-only">(abre o WhatsApp em nova aba)</span>
+          </a>
+        </li>
+        <li class="entrada" style="--i:6">
+          <a class="cartao" href="https://wa.me/5587981812578" data-servico="aplicativo" target="_blank" rel="noopener">
+            <span class="cartao-icone" aria-hidden="true"><svg><use href="#i-celular"/></svg></span>
+            <span class="cartao-texto">
+              <span class="cartao-titulo">Aplicativo Particular</span>
+              <span class="cartao-desc">Seus treinos sempre na palma da mão.</span>
+            </span>
+            <span class="cartao-whats" aria-hidden="true"><svg><use href="#i-whatsapp"/></svg></span>
+            <span class="sr-only">(abre o WhatsApp em nova aba)</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5: botão secundário do Instagram -->
+    <a class="botao-instagram entrada" style="--i:7" href="https://instagram.com/nadsoninstrutor" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-instagram"/></svg>
+      <span>Siga no Instagram <strong>@nadsoninstrutor</strong></span>
+      <span class="sr-only">(abre em nova aba)</span>
+    </a>
+
+  </main>
+
+  <!-- 6: rodapé (o ano é atualizado sozinho) -->
+  <footer class="rodape entrada" style="--i:8">
+    <div class="divisor" aria-hidden="true">
+      <span></span><svg><use href="#i-barras"/></svg><span></span>
+    </div>
+    <p>© <span id="ano">2026</span> NR Performance</p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ==========================================================
+         CONFIGURAÇÕES: para mudar o número ou as mensagens,
+         edite só aqui. Use o número com 55 + DDD, só os dígitos.
+         ========================================================== */
+      var WHATSAPP = "5587981812578";
+
+      var MENSAGENS = {
+        consultoria:   "Olá, Nadson! Vim pelo Instagram e tenho interesse na Consultoria Online. Pode me explicar como funciona e quais são os valores?",
+        avaliacao:     "Olá, Nadson! Vim pelo Instagram e gostaria de agendar uma Avaliação Física. Quais horários você tem disponíveis?",
+        emagrecimento: "Olá, Nadson! Vim pelo Instagram e quero participar do Projeto de Emagrecimento. Como funciona e como faço para começar?",
+        aplicativo:    "Olá, Nadson! Vim pelo Instagram e tenho interesse no Aplicativo Particular. Pode me explicar como funciona e como tenho acesso?"
+      };
+
+      // Monta o link do WhatsApp de cada botão, com a mensagem pronta
+      var botoes = document.querySelectorAll("[data-servico]");
+      for (var i = 0; i < botoes.length; i++) {
+        var mensagem = MENSAGENS[botoes[i].getAttribute("data-servico")];
+        if (mensagem) {
+          botoes[i].href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(mensagem);
+        }
+      }
+
+      // Ano atual no rodapé
+      var ano = document.getElementById("ano");
+      if (ano) ano.textContent = new Date().getFullYear();
+
+      // Faz o efeito de "pressionar" funcionar no toque do iPhone
+      document.addEventListener("touchstart", function () {}, { passive: true });
+    })();
+  </script>
+</body>
+</html>
